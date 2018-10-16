@@ -1,0 +1,19 @@
+<soap:Envelope
+	xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+	<soap:Header>
+		<spdb:RequestHeader
+			xmlns:spdb="http://schemas.xml.spdb.com/RequestHeader/">
+			<requestId>6492232043580208</requestId>
+			<requestDate>2018-10-13</requestDate>
+		</spdb:RequestHeader>
+	</soap:Header>
+	<soap:Body>
+		<ns2:testWs xmlns:ns2="http://ws.com/">
+			<arg0>list params</arg0>
+			<arg1>
+				<passWord>spdb</passWord>
+				<userName>spdb</userName>
+			</arg1>
+		</ns2:testWs>
+	</soap:Body>
+</soap:Envelope>
