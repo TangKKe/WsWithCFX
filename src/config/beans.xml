@@ -13,7 +13,7 @@
 	<bean id="InInterceptor" class="com.interceptor.InInterceptor"></bean>
 	<bean id="OutInterceptor" class="com.interceptor.OutInterceptor"></bean>
 
-	<cxf:bus xmlns:cfx="http://cxf.apache.org/core">
+	<!-- <cxf:bus xmlns:cfx="http://cxf.apache.org/core">
 		<cfx:features>
 			<cfx:logging></cfx:logging>
 		</cfx:features>
@@ -23,7 +23,7 @@
 		<cfx:outInterceptors>
 			<ref bean="cxfLoggingOutInterceptor" />
 		</cfx:outInterceptors>
-	</cxf:bus>
+	</cxf:bus> -->
 
 	<jaxws:endpoint id="TestWs"
 		implementor="com.ws.TestWsImpl" address="/TestWs">
