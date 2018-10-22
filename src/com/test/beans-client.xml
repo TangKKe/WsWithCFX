@@ -28,7 +28,7 @@
     
 	<jaxws:client id="TestWsClient"
 		serviceClass="com.ws.TestWs"
-		address="http://localhost:8080/WsWithCFX/webService/TestWs">
+		address="http://localhost:8080/WsWithCXF/webService/TestWs">
 		<jaxws:inInterceptors>
 			<ref bean="cxfLoggingInInterceptor" />
 		</jaxws:inInterceptors>
