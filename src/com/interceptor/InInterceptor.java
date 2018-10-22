@@ -10,6 +10,8 @@ import org.apache.cxf.headers.Header;
 import org.apache.cxf.interceptor.Fault;
 import org.apache.cxf.phase.AbstractPhaseInterceptor;
 import org.apache.cxf.phase.Phase;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * 拦截器。
@@ -17,6 +19,8 @@ import org.apache.cxf.phase.Phase;
  *
  */
 public class InInterceptor extends AbstractPhaseInterceptor<SoapMessage>{
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(InInterceptor.class);
 
 	public InInterceptor() {
 		super(Phase.PRE_STREAM);
@@ -24,6 +28,7 @@ public class InInterceptor extends AbstractPhaseInterceptor<SoapMessage>{
 
 	@Override
 	public void handleMessage(SoapMessage soapMessage) throws Fault {
+		LOGGER.info("开始执行请求报文拦截器");
 		List<Header> list = soapMessage.getHeaders();
 		SoapHeader requestHeader = CreateRequestHeader.createRequestHeader();
 		list.add(0, requestHeader);
