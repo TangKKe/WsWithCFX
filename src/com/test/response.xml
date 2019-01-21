@@ -4,23 +4,28 @@
 	<soap:Header>
 		<spdb:ResponseHeader
 			xmlns:spdb="http://schemas.xml.spdb.com/Header/">
-			<responseId>4288796005842076</responseId>
-			<responseDate>2018-10-16</responseDate>
+			<responseId>430830301802949</responseId>
+			<responseDate>2018-12-5</responseDate>
 		</spdb:ResponseHeader>
 	</soap:Header>
 	<soap:Body>
-		<ns2:testGetUserResponse
+		<ns2:testGetUserInfoResponse
 			xmlns:ns2="http://ws.com/">
 			<return>
-				<describe>user查询成功！</describe>
+				<describe>userInfo查询成功！</describe>
 				<flag>true</flag>
 				<userInfo>
+					<addr>上海浦东1</addr>
+					<emailArray>11111@qq.com</emailArray>
+					<emailArray>11111@163.com</emailArray>
+					<id>1</id>
+					<tel>11111</tel>
 					<user>
-						<passWord>123456</passWord>
-						<userName>邓奕波</userName>
+						<passWord>spdb1</passWord>
+						<userName>spdb1</userName>
 					</user>
 				</userInfo>
 			</return>
-		</ns2:testGetUserResponse>
+		</ns2:testGetUserInfoResponse>
 	</soap:Body>
 </soap:Envelope>
