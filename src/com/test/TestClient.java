@@ -1,7 +1,13 @@
 package com.test;
 
+import java.util.Enumeration;
+
+import javax.servlet.ServletContext;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.context.ContextLoader;
+import org.springframework.web.context.WebApplicationContext;
 
 import com.vo.User;
 import com.vo.UserInfo;
@@ -22,11 +28,12 @@ public class TestClient {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		
+		testServletContext();
+ 		
 //		testAddUserInfo();
 //		testGetUserInfo();
 //		testAddUser();
-		testGetUser();
+//		testGetUser();
 	}
 	
 	
@@ -40,7 +47,7 @@ public class TestClient {
 		String[] emailArray = {"11111@qq.com","11111@163.com"};
 		userInfo.setEmailArray(emailArray);
 		userInfo.setTel("11111");
-		userInfo.setId("1");
+		userInfo.setId("111");
 		testWs.testAddUserInfo(userInfo);
 		
 		
@@ -48,14 +55,14 @@ public class TestClient {
 	
 	public static void testGetUserInfo() throws Exception {
 		UserInfo userInfo = new UserInfo();
-		userInfo.setId("1");
+		userInfo.setId("11");
 		testWs.testGetUserInfo(userInfo);
 	}
 	
 	public static void testAddUser() {
 		User user = new User();
-		user.setUserName("邓奕波");
-		user.setPassWord("123456");
+		user.setUserName("邓奕波1");
+		user.setPassWord("12345677");
 		testWs.testAddUser(user);
 	}
 	
@@ -65,6 +72,10 @@ public class TestClient {
 		testWs.testGetUser(user);
 		
 		
+	}
+	
+	public static void testServletContext() {
+		testWs.testGetServletContext();
 	}
 
 }
